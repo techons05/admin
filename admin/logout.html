@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attendly — Logging out…</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body class="logout-body">
+  <div class="logout-card">
+    <div class="logo-mark" style="font-size:2.5rem;margin-bottom:16px">A</div>
+    <h2>Logging you out…</h2>
+    <p>You will be redirected to the login page shortly.</p>
+    <div class="logout-spinner"></div>
+  </div>
+  <script type="module">
+    // ===== LOGOUT PAGE =====
+    // Clears admin session from localStorage then redirects to login
+    import { logout } from './database.js';
+
+    setTimeout(() => {
+      logout(); // clears 'attendly_user' and redirects to ../loginE.html
+    }, 1500);
+  </script>
+</body>
+</html>
